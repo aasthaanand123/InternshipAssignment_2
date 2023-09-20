@@ -35,10 +35,6 @@ form.addEventListener("submit", (ev) => {
   setData(word);
 });
 
-clearIcon.addEventListener("click", function () {
-  document.querySelector("input").value = "";
-});
-
 input.addEventListener("input", function () {
   if (input.value.trim() !== "") {
     clearIcon.style.display = "block";
