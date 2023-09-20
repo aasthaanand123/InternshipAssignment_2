@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="root">
+      <div class="container">
+        <div class="containerchild">
+          <header>
+            <div>
+              <img
+                src="./assets/bookimg.png"
+                alt="image of a book"
+                class="headerimg"
+              />
+            </div>
+          </header>
+          <main>
+            <div class="dictionary">
+              <div class="containerbox">
+                <h1>Word lookup</h1>
+                <form action="#" method="post">
+                  <div class="formdiv">
+                    <div class="inputdiv">
+                      <input type="text" /><span class="clear-icon"
+                        >&#10006;</span
+                      >
+                    </div>
+                    <div class="buttondiv">
+                      <button type="submit">Search</button>
+                    </div>
+                  </div>
+                </form>
+                <div class="suggestions">Such as: moon, sunset, nature</div>
+              </div>
+              <div class="results_wrapper none">
+                <div class="results">
+                  <h2></h2>
+                  <p class="meaningtext"></p>
+                  <div class="audio_results"></div>
+                </div>
+                <div class="meanings_wrapper"></div>
+              </div>
+            </div>
+          </main>
+          <footer>
+            <div>This website is designed and coded by</div>
+            <span></span>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="utility.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
