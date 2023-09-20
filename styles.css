@@ -166,9 +166,8 @@ audio {
   font-weight: bold;
 }
 mark {
-  background: var(--lightpurple);
+  background: var(--darkpurple);
   color: black;
-  font-weight: 600;
 }
 /* media query */
 @media (max-width: 767px) {
