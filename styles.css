@@ -75,15 +75,24 @@ h1 {
   border-radius: 2px;
   box-sizing: border-box;
 }
+footer span {
+  margin-left: 3px;
+  color: var(--wordcolor);
+  font-style: italic;
+}
 input {
   padding-right: 30px;
 }
 .buttondiv {
   width: 22%;
 }
+audio {
+  outline: none;
+}
 .buttondiv button {
   background-color: var(--darkpurple);
   cursor: pointer;
+  font-weight: 500;
   transition: 200ms color;
 }
 button:hover {
@@ -151,6 +160,14 @@ footer {
 audio {
   margin-top: 10px;
   width: 95%;
+}
+.highlight {
+  background-color: var(--darkpurple);
+  font-weight: bold;
+}
+mark {
+  background: var(--lightpurple);
+  color: black;
 }
 /* media query */
 @media (max-width: 767px) {

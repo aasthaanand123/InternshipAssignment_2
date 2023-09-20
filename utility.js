@@ -3,11 +3,14 @@ function setHeading(data) {
   meaning.innerHTML = "";
   audio.innerHTML = "";
   word.innerText = data.word;
-  meaning.innerText = data.phonetic;
+  if (data.phonetic) {
+    meaning.innerText = data.phonetic;
+  }
   if (data.phonetics && data.phonetics[0].audio) {
     setAudio(data.phonetics[0].audio);
   }
 }
+
 function setExample(definition, new_definition) {
   if (definition.example) {
     new_definition.innerHTML += `<p class="examples">${definition.example}</p>`;
@@ -45,7 +48,7 @@ function setMeaning(data) {
         new_definition.style.marginBottom = "20px";
         new_definition.innerHTML = `
               <p class="definition">${index}. ${definition.definition}</p>`;
-        setExample(definition, new_definition);
+        setExample(definition, new_definition, data.word);
         setSynonym(definition, new_definition);
         definitionsWrapper.appendChild(new_definition);
         index += 1;

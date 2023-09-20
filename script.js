@@ -6,6 +6,7 @@ const dictWrapper = document.querySelector(".results_wrapper");
 const meaningsWrapper = document.querySelector(".meanings_wrapper");
 const clearIcon = document.querySelector(".clear-icon");
 const audio = document.querySelector(".audio_results");
+const context = document.querySelector(".container");
 function setData(word) {
   if (word.length > 0) {
     axios
@@ -14,6 +15,8 @@ function setData(word) {
         input.value = "";
         setHeading(response.data[0]);
         setMeaning(response.data[0].meanings);
+        var instance = new Mark(context);
+        instance.mark(word);
         if (dictWrapper.classList.contains("none")) {
           dictWrapper.classList.remove("none");
         }
@@ -21,6 +24,7 @@ function setData(word) {
 
       .catch((err) => {
         console.log(err);
+        console.log("error occured");
       });
   }
 }
@@ -30,7 +34,7 @@ form.addEventListener("submit", (ev) => {
   let word = input.value;
   setData(word);
 });
-// cross icon
+
 clearIcon.addEventListener("click", function () {
   document.querySelector("input").value = "";
 });
